@@ -1,0 +1,253 @@
+// Japan in Numbers — all figures are real, published statistics.
+// Every figure carries its year and its source. Values are rounded to the
+// precision the source publishes; nothing here is invented or estimated
+// by this site. Population figures are the Statistics Bureau's 1 October
+// estimates unless labelled as census counts.
+
+export const DATA = {
+  country: {
+    name: "Japan",
+    japanese: "日本",
+    capital: "Tokyo",
+    areaKm2: 377975,
+    areaSource: "Statistics Bureau of Japan, 2024",
+    islands: 14125,
+    islandsSource: "Geospatial Information Authority of Japan, 2023",
+    currency: "Japanese yen (¥)",
+    timezone: "JST (UTC+9)",
+    headOfGovernment: "Prime Minister Sanae Takaichi (in office since October 2025)",
+    prefectures: 47,
+    forestShare: "about two-thirds",
+    highestPeak: "Mount Fuji, 3,776 m",
+  },
+
+  // Total population, millions, 1 October estimates (Statistics Bureau).
+  populationByYear: [
+    { year: 2015, total: 127.09 },
+    { year: 2016, total: 126.93 },
+    { year: 2017, total: 126.71 },
+    { year: 2018, total: 126.44 },
+    { year: 2019, total: 126.17 },
+    { year: 2020, total: 125.71 },
+    { year: 2021, total: 125.50 },
+    { year: 2022, total: 124.95 },
+    { year: 2023, total: 124.35 },
+    { year: 2024, total: 123.72 },
+  ],
+  populationNote:
+    "Annual estimates, 1 October each year, Statistics Bureau of Japan. " +
+    "The 2020 census counted 126.15 million; the series above uses the " +
+    "comparable annual estimates. The population peaked at 128.08 million in 2008.",
+
+  // Age structure, 2024 (Statistics Bureau, 1 October estimates).
+  ageStructure: {
+    year: 2024,
+    groups: [
+      { label: "Aged 0–14", millions: 13.83, share: 11.2 },
+      { label: "Aged 15–64", millions: 73.55, share: 59.5 },
+      { label: "Aged 65 and over", millions: 36.24, share: 29.3 },
+    ],
+    medianAge: 49.5,
+    medianAgeSource: "United Nations, World Population Prospects 2024",
+    oldestShareNote:
+      "Japan has the world's highest share of people aged 65 and over (29.3% in 2024).",
+  },
+
+  // Vital statistics, 2024 (Ministry of Health, Labour and Welfare).
+  vital: {
+    year: 2024,
+    births: 720988,
+    deaths: 1618684,
+    naturalChange: -897696,
+    fertilityRate: 1.15,
+    fertilityNote: "Total fertility rate, 2024 — the lowest on record.",
+    source: "Ministry of Health, Labour and Welfare, Vital Statistics, 2024",
+  },
+
+  // Life expectancy at birth, years (MHLW abridged life tables).
+  lifeExpectancy: [
+    { year: 2015, men: 80.75, women: 86.99 },
+    { year: 2019, men: 81.41, women: 87.45 },
+    { year: 2020, men: 81.64, women: 87.74 },
+    { year: 2021, men: 81.47, women: 87.57 },
+    { year: 2022, men: 81.05, women: 87.09 },
+    { year: 2023, men: 81.09, women: 87.14 },
+  ],
+  lifeExpectancySource: "Ministry of Health, Labour and Welfare, Abridged Life Tables",
+
+  // Prefectures: population in millions, 2024 estimates (Statistics Bureau).
+  // Region totals on the Regions page are computed from these, so they agree.
+  prefectures: [
+    { name: "Tokyo", region: "Kanto", pop: 14.18, capital: "Shinjuku" },
+    { name: "Kanagawa", region: "Kanto", pop: 9.20, capital: "Yokohama" },
+    { name: "Osaka", region: "Kansai", pop: 8.77, capital: "Osaka" },
+    { name: "Aichi", region: "Chubu", pop: 7.47, capital: "Nagoya" },
+    { name: "Saitama", region: "Kanto", pop: 7.34, capital: "Saitama" },
+    { name: "Chiba", region: "Kanto", pop: 6.28, capital: "Chiba" },
+    { name: "Hyogo", region: "Kansai", pop: 5.36, capital: "Kobe" },
+    { name: "Hokkaido", region: "Hokkaido", pop: 5.09, capital: "Sapporo" },
+    { name: "Fukuoka", region: "Kyushu & Okinawa", pop: 5.09, capital: "Fukuoka" },
+    { name: "Shizuoka", region: "Chubu", pop: 3.50, capital: "Shizuoka" },
+    { name: "Ibaraki", region: "Kanto", pop: 2.83, capital: "Mito" },
+    { name: "Hiroshima", region: "Chugoku", pop: 2.73, capital: "Hiroshima" },
+    { name: "Kyoto", region: "Kansai", pop: 2.52, capital: "Kyoto" },
+    { name: "Miyagi", region: "Tohoku", pop: 2.26, capital: "Sendai" },
+    { name: "Niigata", region: "Chubu", pop: 2.11, capital: "Niigata" },
+    { name: "Nagano", region: "Chubu", pop: 2.01, capital: "Nagano" },
+    { name: "Gifu", region: "Chubu", pop: 1.92, capital: "Gifu" },
+    { name: "Gunma", region: "Kanto", pop: 1.91, capital: "Maebashi" },
+    { name: "Tochigi", region: "Kanto", pop: 1.90, capital: "Utsunomiya" },
+    { name: "Okayama", region: "Chugoku", pop: 1.85, capital: "Okayama" },
+    { name: "Fukushima", region: "Tohoku", pop: 1.74, capital: "Fukushima" },
+    { name: "Mie", region: "Kansai", pop: 1.70, capital: "Tsu" },
+    { name: "Kumamoto", region: "Kyushu & Okinawa", pop: 1.70, capital: "Kumamoto" },
+    { name: "Kagoshima", region: "Kyushu & Okinawa", pop: 1.55, capital: "Kagoshima" },
+    { name: "Okinawa", region: "Kyushu & Okinawa", pop: 1.47, capital: "Naha" },
+    { name: "Shiga", region: "Kansai", pop: 1.41, capital: "Otsu" },
+    { name: "Nara", region: "Kansai", pop: 1.29, capital: "Nara" },
+    { name: "Yamaguchi", region: "Chugoku", pop: 1.28, capital: "Yamaguchi" },
+    { name: "Ehime", region: "Shikoku", pop: 1.27, capital: "Matsuyama" },
+    { name: "Nagasaki", region: "Kyushu & Okinawa", pop: 1.25, capital: "Nagasaki" },
+    { name: "Aomori", region: "Tohoku", pop: 1.19, capital: "Aomori" },
+    { name: "Iwate", region: "Tohoku", pop: 1.16, capital: "Morioka" },
+    { name: "Ishikawa", region: "Chubu", pop: 1.10, capital: "Kanazawa" },
+    { name: "Oita", region: "Kyushu & Okinawa", pop: 1.09, capital: "Oita" },
+    { name: "Miyazaki", region: "Kyushu & Okinawa", pop: 1.03, capital: "Miyazaki" },
+    { name: "Yamagata", region: "Tohoku", pop: 1.02, capital: "Yamagata" },
+    { name: "Toyama", region: "Chubu", pop: 1.00, capital: "Toyama" },
+    { name: "Kagawa", region: "Shikoku", pop: 0.92, capital: "Takamatsu" },
+    { name: "Akita", region: "Tohoku", pop: 0.92, capital: "Akita" },
+    { name: "Wakayama", region: "Kansai", pop: 0.89, capital: "Wakayama" },
+    { name: "Yamanashi", region: "Chubu", pop: 0.80, capital: "Kofu" },
+    { name: "Saga", region: "Kyushu & Okinawa", pop: 0.79, capital: "Saga" },
+    { name: "Fukui", region: "Chubu", pop: 0.74, capital: "Fukui" },
+    { name: "Tokushima", region: "Shikoku", pop: 0.69, capital: "Tokushima" },
+    { name: "Kochi", region: "Shikoku", pop: 0.66, capital: "Kochi" },
+    { name: "Shimane", region: "Chugoku", pop: 0.65, capital: "Matsue" },
+    { name: "Tottori", region: "Chugoku", pop: 0.54, capital: "Tottori" },
+  ],
+  prefectureSource: "Statistics Bureau of Japan, Population Estimates, 1 October 2024 (millions, rounded)",
+
+  regions: [
+    "Hokkaido",
+    "Tohoku",
+    "Kanto",
+    "Chubu",
+    "Kansai",
+    "Chugoku",
+    "Shikoku",
+    "Kyushu & Okinawa",
+  ],
+
+  // Economy (Cabinet Office national accounts; IMF; Statistics Bureau; MOF).
+  economy: {
+    gdpNominalYen: [
+      { year: 2019, yen: 559 },
+      { year: 2020, yen: 539 },
+      { year: 2021, yen: 551 },
+      { year: 2022, yen: 560 },
+      { year: 2023, yen: 592 },
+      { year: 2024, yen: 609 },
+    ],
+    gdpNote: "Nominal GDP, trillion yen, Cabinet Office. 2024: about $4.0 trillion (IMF).",
+    gdpPerCapitaUsd: 32500,
+    gdpPerCapitaYear: 2024,
+    gdpPerCapitaSource: "IMF World Economic Outlook, 2024 (about $32,500)",
+    unemployment: 2.5,
+    unemploymentYear: 2024,
+    unemploymentSource: "Statistics Bureau, Labour Force Survey, 2024 average",
+    cpi: 2.7,
+    cpiYear: 2024,
+    cpiSource: "Statistics Bureau, Consumer Price Index, 2024 average",
+    exportsYen: 108,
+    importsYen: 113,
+    tradeYear: 2024,
+    tradeSource: "Ministry of Finance, Trade Statistics, 2024 (trillion yen, rounded)",
+    exportPartners: [
+      { country: "United States", share: 20 },
+      { country: "China", share: 18 },
+      { country: "South Korea", share: 7 },
+      { country: "Taiwan", share: 6 },
+      { country: "Hong Kong", share: 4 },
+    ],
+    exportPartnersSource: "Ministry of Finance, Trade Statistics, 2024 (shares rounded)",
+    debtToGdp: 236,
+    debtYear: 2024,
+    debtSource: "IMF, general government gross debt, about 236% of GDP (2024)",
+    nikkei: 39894,
+    nikkeiNote: "Nikkei 225 index at the close of 2024",
+    yenPerDollar: 157,
+    yenNote: "Yen per US dollar, end of 2024 (about ¥157)",
+    sectors: [
+      { label: "Services", share: 70 },
+      { label: "Manufacturing", share: 19 },
+      { label: "Construction", share: 6 },
+      { label: "Other (incl. agriculture, mining)", share: 5 },
+    ],
+    sectorsSource: "Cabinet Office, shares of nominal GDP, about (2023)",
+  },
+
+  // Education (MEXT School Basic Survey; OECD PISA 2022).
+  education: {
+    compulsoryYears: 9,
+    compulsoryNote: "Six years of primary school and three of lower secondary school, ages 6–15.",
+    highSchoolAdvancement: 98.8,
+    highSchoolYear: 2024,
+    universityAdvancement: 59.1,
+    universityYear: 2024,
+    advancementSource: "MEXT, School Basic Survey, 2024",
+    enrolment: [
+      { level: "Primary school", pupils: 5.93, years: "6 years" },
+      { level: "Lower secondary school", pupils: 3.16, years: "3 years" },
+      { level: "Upper secondary school", pupils: 2.98, years: "3 years" },
+      { level: "University (undergraduate)", pupils: 2.95, years: "4 years" },
+    ],
+    enrolmentSource: "MEXT, School Basic Survey, 2024 (millions of pupils/students, rounded)",
+    pisa: [
+      { subject: "Mathematics", rank: 5, score: 536 },
+      { subject: "Reading", rank: 3, score: 516 },
+      { subject: "Science", rank: 2, score: 547 },
+    ],
+    pisaSource: "OECD PISA 2022 — rank among OECD countries, mean score",
+    spendingShare: "about 3%",
+    spendingSource: "OECD, public spending on education, about 3% of GDP",
+  },
+
+  // Health (MHLW; OECD Health Statistics 2024).
+  health: {
+    infantMortality: 1.8,
+    infantMortalityYear: 2023,
+    infantMortalitySource: "MHLW, Vital Statistics, 2023 (deaths per 1,000 live births)",
+    doctorsPer1000: 2.6,
+    bedsPer1000: 12.6,
+    oecdYear: 2022,
+    oecdSource: "OECD Health Statistics, 2022",
+    spendingShare: "about 11%",
+    spendingYear: 2022,
+    spendingSource: "OECD, health spending as a share of GDP, about 11% (2022)",
+    universalSince: 1961,
+    universalNote: "Universal health insurance has covered the whole population since 1961.",
+    causesOfDeath: [
+      { cause: "Cancer (malignant neoplasms)", share: 24 },
+      { cause: "Heart disease", share: 15 },
+      { cause: "Senility (old age)", share: 13 },
+      { cause: "Cerebrovascular disease", share: 6 },
+      { cause: "Pneumonia", share: 5 },
+      { cause: "All other causes", share: 37 },
+    ],
+    causesYear: 2023,
+    causesSource: "MHLW, Vital Statistics, 2023 (shares of all deaths, rounded)",
+  },
+
+  sources: [
+    { name: "Statistics Bureau of Japan", what: "Population Estimates; Labour Force Survey; Consumer Price Index" },
+    { name: "Cabinet Office, Government of Japan", what: "National accounts (GDP); population of prefectures" },
+    { name: "Ministry of Health, Labour and Welfare", what: "Vital Statistics; Abridged Life Tables" },
+    { name: "Ministry of Education, Culture, Sports, Science and Technology (MEXT)", what: "School Basic Survey" },
+    { name: "Ministry of Finance", what: "Trade Statistics" },
+    { name: "International Monetary Fund", what: "World Economic Outlook (GDP in US dollars; government debt)" },
+    { name: "OECD", what: "PISA 2022; Health Statistics; education spending" },
+    { name: "United Nations", what: "World Population Prospects 2024 (median age)" },
+    { name: "Geospatial Information Authority of Japan", what: "Island count" },
+  ],
+};
